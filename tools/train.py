@@ -93,7 +93,7 @@ def main():
             shutil.rmtree(models_dst_dir)
         shutil.copytree(os.path.join(this_dir, '../lib/models'), models_dst_dir)
 
-    if distributed:
+    if (True):
         torch.cuda.set_device(args.local_rank)
         torch.distributed.init_process_group(
             backend="nccl", init_method="env://",
